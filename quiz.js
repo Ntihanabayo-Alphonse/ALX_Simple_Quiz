@@ -6,7 +6,7 @@ userInputs.forEach(function (radio) {
         if (radio.checked) {
             const userAnswer = radio.value;
             function checkAnswer() {
-                if (correctAnswer === userAnswer) {
+                if (userAnswer === correctAnswer) {
                     document.querySelector('#feedback').textContent = "Correct! Well done.";
                     document.querySelector('#feedback').style.color = "green";
                 } else {
@@ -14,7 +14,7 @@ userInputs.forEach(function (radio) {
                     document.querySelector('#feedback').style.color = "red";
                 }
             }
-            
+
             document.getElementById('submit-answer').addEventListener('click', checkAnswer);
         }
     })
